@@ -156,7 +156,9 @@ urls = {
         "is_json": True,
     },
     "select_url": {  # 查询余票
-        "req_url": "/otn/leftTicket/queryO?leftTicketDTO.train_date={0}&leftTicketDTO.from_station={1}&leftTicketDTO.to_station={2}&purpose_codes=ADULT",
+        # https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E6%9D%AD%E5%B7%9E,HZH&ts=%E4%B8%8A%E6%B5%B7,SHH&date=2018-12-13&flag=N,N,Y
+        # "req_url": "/otn/leftTicket/queryO?leftTicketDTO.train_date={0}&leftTicketDTO.from_station={1}&leftTicketDTO.to_station={2}&purpose_codes=ADULT",
+        "req_url": "/otn/leftTicket/init?linktypeid=dc&fs={1}&ts={2}&date={0}&flag=N,N,Y",
         "req_type": "get",
         "Referer": "https://kyfw.12306.cn/otn/leftTicket/init",
         "Host": "kyfw.12306.cn",
